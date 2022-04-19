@@ -26,29 +26,21 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
+                         <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
                         <goals><goal>copy</goal></goals>
                         <configuration>
+                                 <source>1.8</source>
+                <target>1.8</target>
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>org.eclipse.jetty</groupId>
